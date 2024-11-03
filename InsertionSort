@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+swap(int *a, int *b)
+    {
+        int tepm;
+        temp=*a;
+        *a=*b;
+        *b=temp;
+    }
+
+selection_sort(int arr, int n)
+    {
+        
+
+            for (int i = 0; i < n-1; i++)
+            {  
+                 int maxterm=arr[0], maxindex=0;
+                 
+                for (int j = 1; j < n-i; j++)
+                {
+                    if ( arr[j]>maxterm )
+                  {
+                     maxterm=arr[j];
+                     maxindex=0;
+                  }
+                   
+                    swap(arr[n-1],maxterm);
+
+                }
+                
+                
+                
+            }
+            
+
+    }
+
+int main
+    {
+        int n, arr[100];
+        scanf("%d", &n);
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+        
+        selection_sort(arr, n);
+        
+        for (int i = 0; i < n; i++)
+        {
+            printf("%d", &arr[i]);
+        }
+
+        return 0;
+    }
